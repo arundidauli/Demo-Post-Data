@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.activities.impl.MainActivity">
+
+
+  <androidx.cardview.widget.CardView
+      android:id="@+id/card_header"
+      android:layout_width="match_parent"
+      android:layout_height="250dp"
+      android:layout_marginTop="-60dp"
+      app:cardCornerRadius="@dimen/card_radius">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:src="@mipmap/slider3"
+          android:scaleType="centerCrop"
+          android:foreground="@drawable/gredient_bg"
+          android:contentDescription="@string/app_name" />
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="20sp"
+          android:layout_marginTop="100dp"
+          android:textStyle="bold"
+          android:textColor="@color/white"
+          android:paddingStart="16dp"
+          android:paddingEnd="16dp"
+          android:text="Search Your Categories"/>
+      <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:cardElevation="4sp"
+          android:layout_alignParentBottom="true"
+          app:cardUseCompatPadding="true"
+          android:layout_margin="16dp"
+          app:cardCornerRadius="16dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:textSize="12sp"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"/>
+
+      </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+  </androidx.cardview.widget.CardView>
+
+
+  <TextView
+      android:id="@+id/txt_categories"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textSize="20sp"
+      android:layout_below="@+id/card_header"
+      android:textStyle="bold"
+      android:textColor="@color/black"
+      android:paddingStart="8dp"
+      android:paddingEnd="8dp"
+      android:layout_margin="8dp"
+
+      android:text="Categories"/>
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rv_post"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/txt_categories"/>
+
+
+  <ProgressBar
+      android:id="@+id/progress_circular"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"/>
+
+  <TextView
+      android:id="@+id/txt_no_record_found"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="No Record Found!"
+      android:padding="16dp"
+      android:visibility="gone"
+      android:layout_centerInParent="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.activities.impl.AppointmentActivity">
+
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/purple_500"
+        android:padding="14dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:padding="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Schedule Time"
+            android:padding="8dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            />
+
+    </LinearLayout>
+
+    <devs.mulham.horizontalcalendar.HorizontalCalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:textColorNormal="#bababa"
+        app:textColorSelected="@color/purple_500"
+        app:selectorColor="@color/purple_500"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        android:background="#33BB86FC"
+        android:layout_below="@+id/toolbar"
+        app:selectedDateBackground="@drawable/bg_select"/>
+
+    <TextView
+        android:id="@+id/txt_select_schedule_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Time Schedule"
+        android:padding="8dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/calendarView"
+        android:textSize="18sp"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/ll_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_select_schedule_time"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rect_border"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:text="02:00 PM"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:paddingBottom="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rect_border_select"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:text="02:00 PM"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:paddingBottom="8dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_first"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rect_border"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:text="02:00 PM"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:paddingBottom="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rect_border"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:text="02:00 PM"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:paddingBottom="8dp"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_1"
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_below="@+id/ll_second"
+        android:layout_marginTop="16dp"
+        android:background="@color/purple_200"/>
+
+    <TextView
+        android:id="@+id/txt_book_seat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Book Seat"
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/view_1"
+        android:textSize="18sp"
+        />
+
+    <View
+        android:id="@+id/view_2"
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_below="@+id/txt_book_seat"
+        android:background="@color/purple_200"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_2"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/rect_border_select"
+            android:src="@drawable/ic_chair"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:src="@drawable/ic_chair"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:src="@drawable/ic_chair"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:src="@drawable/ic_chair"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/txt_confirm_booking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/purple_200"
+        android:textSize="18sp"
+        android:text="Confirm"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="@color/white" />
+
+</RelativeLayout>
