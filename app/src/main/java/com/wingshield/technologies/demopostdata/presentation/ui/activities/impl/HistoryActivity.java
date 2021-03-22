@@ -27,5 +27,7 @@ public class HistoryActivity extends AppCompatActivity {
 
         rv_history.setLayoutManager(new LinearLayoutManager(HistoryActivity.this));
         rv_history.setAdapter(new HistoryAdapter(HistoryActivity.this, usersList));
+
+
     }
 }

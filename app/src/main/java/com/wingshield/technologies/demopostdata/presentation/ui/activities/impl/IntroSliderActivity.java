@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
 import com.wingshield.technologies.demopostdata.R;
 
 public class IntroSliderActivity extends AppCompatActivity {
@@ -30,10 +31,12 @@ public class IntroSliderActivity extends AppCompatActivity {
                 R.layout.welcome_slide2,
                 R.layout.welcome_slide3
         };
+
+        DotsIndicator dotsIndicator=findViewById(R.id.dots_indicator);
         MyViewPagerAdapter myViewPagerAdapter = new MyViewPagerAdapter();
         view_pager.setAdapter(myViewPagerAdapter);
         view_pager.addOnPageChangeListener(viewPagerPageChangeListener);
-
+        dotsIndicator.setViewPager(view_pager);
 
         btn_next.setOnClickListener(v -> {
             startActivity(new Intent(getApplicationContext(),LoginRegisterActivity.class));
