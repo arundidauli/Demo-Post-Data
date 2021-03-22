@@ -15,7 +15,7 @@ public class LoginRegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login_register);
 
         findViewById(R.id.btn_next).setOnClickListener(v -> {
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            startActivity(new Intent(getApplicationContext(),OtpVerifyActivity.class));
         });
 
     }

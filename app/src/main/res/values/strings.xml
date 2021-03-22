@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">DemoPostData</string>
+    <string name="enter_your_phone_number_in_order_to_send_you_your_otp_security_code">Enter your phone number in order to send you your OTP security code.</string>
+    <string name="verify_continue"><![CDATA[Verify & Continue]]></string>
+    <string name="skip_continue"><![CDATA[Skip & Continue]]></string>
 </resources>
