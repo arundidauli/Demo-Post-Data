@@ -1,9 +1,11 @@
 package com.wingshield.technologies.demopostdata.presentation.ui.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.wingshield.technologies.demopostdata.R;
 import com.wingshield.technologies.demopostdata.model.Post;
+import com.wingshield.technologies.demopostdata.presentation.ui.activities.impl.AppointmentActivity;
 
 import java.util.List;
 
@@ -34,6 +37,10 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Po
     public void onBindViewHolder(@NonNull CategoriesAdapter.PostViewHolder holder, int position) {
 
         //holder.bindData(postList.get(position));
+
+        holder.rl_root.setOnClickListener(v -> {
+            context.startActivity(new Intent(context, AppointmentActivity.class));
+        });
     }
 
     @Override
@@ -44,10 +51,11 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Po
     public static class PostViewHolder extends RecyclerView.ViewHolder {
 
         TextView txt_title, txt_body;
+        RelativeLayout rl_root;
 
         public PostViewHolder(@NonNull View itemView) {
             super(itemView);
-
+            rl_root=itemView.findViewById(R.id.rl_root);
             /*txt_title = itemView.findViewById(R.id.txt_title);
             txt_body = itemView.findViewById(R.id.txt_body);*/
         }

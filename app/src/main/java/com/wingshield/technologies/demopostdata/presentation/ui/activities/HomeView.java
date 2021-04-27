@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface HomeView {
     void setHomeData(List<HomeData> homeDataList);
+
 }

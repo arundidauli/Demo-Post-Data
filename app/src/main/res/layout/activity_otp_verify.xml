@@ -73,7 +73,7 @@
             android:paddingEnd="16dp"
             android:textColor="@color/white"
             android:layout_margin="8dp"
-            android:text="We sent a 6 digit otp on your number 0990090***."/>
+            android:text="@string/we_sent_a_6_digit_otp_on_your_number"/>
 
         <EditText
             android:id="@+id/et_phone_number"
