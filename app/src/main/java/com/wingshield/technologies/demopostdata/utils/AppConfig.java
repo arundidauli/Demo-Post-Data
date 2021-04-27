@@ -14,10 +14,8 @@ public class AppConfig {
 
     public static String TAG = "AppConfig";
     public static String TOKEN_ID = "Bearer aa15d6ec5ed47adabb395dd63a1c52e42fba1fc084ff91bccc1177a1140363f0";
-    public static String STRIPE_KEY = "pk_test_c6VvBEbwHFdulFZ62q1IQrar";
-    public static String BRAIN_TREE_KEY = "sandbox_pghddbzc_h44cx45wt7g27wmc";
-    public  static boolean CASH_ON_DELIVERY = true;
-    public  static boolean WALLET_USE = true;
+
+
 
 
 

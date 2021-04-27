@@ -39,7 +39,10 @@ public class IntroSliderActivity extends AppCompatActivity {
         dotsIndicator.setViewPager(view_pager);
 
         btn_next.setOnClickListener(v -> {
-            startActivity(new Intent(getApplicationContext(),LoginRegisterActivity.class));
+            Intent intent = new Intent(getApplicationContext(), LoginRegisterActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
         });
 
 

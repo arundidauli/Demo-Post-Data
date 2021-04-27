@@ -76,7 +76,7 @@
             android:text="@string/we_sent_a_6_digit_otp_on_your_number"/>
 
         <EditText
-            android:id="@+id/et_phone_number"
+            android:id="@+id/et_otp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"
@@ -88,6 +88,15 @@
             android:background="@drawable/rect_white_border"
             android:layout_margin="8dp"
             android:hint="OTP"/>
+        <TextView
+            android:id="@+id/resend_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:padding="8dp"
+            android:textColor="@color/white"
+            android:layout_margin="8dp"
+            android:text="Resend OTP"/>
         <Button
             android:id="@+id/btn_next"
             android:layout_width="match_parent"
@@ -102,6 +111,13 @@
 
 
     </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
 
 
 

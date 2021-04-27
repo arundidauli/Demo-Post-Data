@@ -16,7 +16,13 @@
         <item name="android:fontFamily">@font/netproximanovasoft</item>
     </style>
 
+    <style name="CustomRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:minHeight">16dip</item>
+        <item name="android:maxHeight">16dip</item>
+        <item name="android:maxWidth">16dip</item>
+        <item name="android:minWidth">16dip</item>
 
+    </style>
     <style name="FullScreen" parent="Theme.DemoPostData">
         <item name="windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>

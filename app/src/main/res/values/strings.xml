@@ -4,4 +4,5 @@
     <string name="verify_continue"><![CDATA[Verify & Continue]]></string>
     <string name="skip_continue"><![CDATA[Skip & Continue]]></string>
     <string name="we_sent_a_6_digit_otp_on_your_number">We sent a 6 digit otp on your number</string>
+    <string name="txt_resend_otp">Resend OTP</string>
 </resources>

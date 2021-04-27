@@ -76,7 +76,7 @@
             android:text="@string/enter_your_phone_number_in_order_to_send_you_your_otp_security_code"/>
 
         <EditText
-            android:id="@+id/et_phone_number"
+            android:id="@+id/et_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"

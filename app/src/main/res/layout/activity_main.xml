@@ -10,7 +10,7 @@
   <androidx.cardview.widget.CardView
       android:id="@+id/card_header"
       android:layout_width="match_parent"
-      android:layout_height="250dp"
+      android:layout_height="300dp"
       android:layout_marginTop="-60dp"
       app:cardCornerRadius="@dimen/card_radius">
     <RelativeLayout
@@ -27,20 +27,22 @@
       <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:textSize="20sp"
-          android:layout_marginTop="100dp"
+          android:textSize="24sp"
+          android:layout_marginTop="80dp"
           android:textStyle="bold"
           android:textColor="@color/white"
           android:paddingStart="16dp"
           android:paddingEnd="16dp"
-          android:text="Book Your Pandit Ji Anytime,Anywhere"/>
+          android:text="Find Your Desired \nPandit Ji \nAnytime,Anywhere"/>
       <androidx.cardview.widget.CardView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           app:cardElevation="4sp"
           android:layout_alignParentBottom="true"
           app:cardUseCompatPadding="true"
-          android:layout_margin="12dp"
+          android:layout_marginStart="12dp"
+          android:layout_marginEnd="12dp"
+          android:layout_marginBottom="25dp"
           app:cardCornerRadius="16dp">
 
         <EditText
@@ -59,21 +61,25 @@
 
 
   </androidx.cardview.widget.CardView>
-
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rv_post"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/card_header" />
 
   <TextView
       android:id="@+id/txt_categories"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:textSize="20sp"
-      android:layout_below="@+id/card_header"
+      android:layout_below="@+id/rv_post"
       android:textColor="@color/black"
       android:layout_margin="8dp"
 
-      android:text="Categories"/>
+      android:text="Top Rated Pandit Ji"/>
 
   <androidx.recyclerview.widget.RecyclerView
-      android:id="@+id/rv_post"
+      android:id="@+id/rv_top_rated"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_below="@+id/txt_categories"/>
@@ -83,6 +89,7 @@
       android:id="@+id/progress_circular"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:visibility="gone"
       android:layout_centerInParent="true"/>
 
   <TextView
