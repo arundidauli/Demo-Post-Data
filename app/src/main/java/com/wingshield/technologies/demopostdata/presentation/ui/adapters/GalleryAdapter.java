@@ -14,34 +14,33 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.wingshield.technologies.demopostdata.R;
 import com.wingshield.technologies.demopostdata.model.Post;
 import com.wingshield.technologies.demopostdata.presentation.ui.activities.impl.AppointmentActivity;
-import com.wingshield.technologies.demopostdata.presentation.ui.activities.impl.ProfileDetailActivity;
 
 import java.util.List;
 
-public class TopRatedAdapter extends RecyclerView.Adapter<TopRatedAdapter.PostViewHolder> {
+public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.PostViewHolder> {
 
     private final Context context;
     private final List<Post> postList;
 
-    public TopRatedAdapter(Context context, List<Post> postList) {
+    public GalleryAdapter(Context context, List<Post> postList) {
         this.context = context;
         this.postList = postList;
     }
 
     @NonNull
     @Override
-    public TopRatedAdapter.PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new PostViewHolder(LayoutInflater.from(context).inflate(R.layout.top_rated_item_row, parent, false));
+    public GalleryAdapter.PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new PostViewHolder(LayoutInflater.from(context).inflate(R.layout.gallery_item_row, parent, false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull TopRatedAdapter.PostViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull GalleryAdapter.PostViewHolder holder, int position) {
 
         //holder.bindData(postList.get(position));
 
-        holder.rl_root.setOnClickListener(v -> {
-            context.startActivity(new Intent(context, ProfileDetailActivity.class));
-        });
+      /*  holder.rl_root.setOnClickListener(v -> {
+            context.startActivity(new Intent(context, AppointmentActivity.class));
+        });*/
     }
 
     @Override
@@ -52,11 +51,11 @@ public class TopRatedAdapter extends RecyclerView.Adapter<TopRatedAdapter.PostVi
     public static class PostViewHolder extends RecyclerView.ViewHolder {
 
         TextView txt_title, txt_body;
-        RelativeLayout rl_root;
+        //RelativeLayout rl_root;
 
         public PostViewHolder(@NonNull View itemView) {
             super(itemView);
-            rl_root=itemView.findViewById(R.id.rl_root);
+          //  rl_root=itemView.findViewById(R.id.rl_root);
             /*txt_title = itemView.findViewById(R.id.txt_title);
             txt_body = itemView.findViewById(R.id.txt_body);*/
         }

@@ -12,23 +12,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DemoPostData">
-        <activity android:name=".presentation.ui.activities.impl.IntroSliderActivity"/>
+        <activity android:name=".presentation.ui.activities.impl.UserProfileActivity"></activity>
+        <activity android:name=".presentation.ui.activities.impl.ProfileDetailActivity" />
+        <activity android:name=".presentation.ui.activities.impl.IntroSliderActivity" />
         <activity android:name=".presentation.ui.activities.impl.OtpVerifyActivity" />
         <activity android:name=".presentation.ui.activities.impl.LoginRegisterActivity" />
         <activity
             android:name=".presentation.ui.activities.impl.SplashActivity"
-            android:theme="@style/FullScreen" >
+            android:theme="@style/FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".presentation.ui.activities.impl.BookingConfirmActivity" />
         <activity android:name=".presentation.ui.activities.impl.HistoryActivity" />
         <activity android:name=".presentation.ui.activities.impl.AppointmentActivity" />
-        <activity android:name=".presentation.ui.activities.impl.UserActivity">
-
-        </activity>
+        <activity android:name=".presentation.ui.activities.impl.UserActivity" />
         <activity android:name=".presentation.ui.activities.impl.MainActivity" />
     </application>
 

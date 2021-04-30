@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="25dp"
+    app:cardCornerRadius="16dp"
     app:cardUseCompatPadding="true"
     app:cardElevation="5sp">
 
@@ -15,8 +15,8 @@
         android:padding="12dp">
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_picture"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:src="@mipmap/mask_profile" />
 
         <LinearLayout
@@ -36,33 +36,37 @@
                 android:textSize="18sp"
                 android:textColor="@color/black"
                 android:text="Arun Kumar"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
                 />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Sadi Fere,Katha,Satya Narayan"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
+                android:paddingTop="3dp"
+                android:textSize="12sp"
                 />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <per.wsj.library.AndRatingBar
-                    android:id="@+id/andRatingBar"
-                    android:layout_width="150dp"
-                    android:layout_height="24dp"
-                    android:rating="4"
-                    app:scaleFactor="1.0"
-                    app:starSpacing="0dp"
-                    />
+                <com.kikt.view.CustomRatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:currentStar="3.5"
+                    app:maxStar="5"
+                    app:minStar="0.5"
+                    app:starHeight="12dp"
+                    app:starWidth="12dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="12k Reviews"
+                    android:textSize="12sp"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center_vertical"
                     />
             </LinearLayout>
 
