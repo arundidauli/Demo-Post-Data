@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -45,6 +46,13 @@ public class MainActivity extends AppCompatActivity implements PostView {
         rv_top_rated.setLayoutManager(new LinearLayoutManager(MainActivity.this));
         rv_top_rated.setAdapter(new TopRatedAdapter(MainActivity.this, postList));
 
+
+        findViewById(R.id.iv_user_photo).setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), UserProfileActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+        });
     }
 
     @Override

@@ -10,8 +10,6 @@
       android:layout_width="match_parent"
       android:layout_height="match_parent">
 
-
-
   <androidx.cardview.widget.CardView
       android:id="@+id/card_header"
       android:layout_width="match_parent"
@@ -24,20 +22,32 @@
       <ImageView
           android:layout_width="match_parent"
           android:layout_height="match_parent"
-          android:src="@mipmap/slider3"
+          android:src="@color/purple_500"
           android:scaleType="centerCrop"
           android:foreground="@drawable/gredient_bg"
           android:contentDescription="@string/app_name" />
+      <de.hdodenhof.circleimageview.CircleImageView
+          android:id="@+id/iv_user_photo"
+          android:layout_width="55dp"
+          android:layout_height="55dp"
+          android:layout_alignParentEnd="true"
+          android:layout_marginEnd="@dimen/dimen_16dp"
+          android:layout_marginTop="75dp"
+          app:civ_border_color="#33FFFFFF"
+          app:civ_border_width="4dp"
+          android:src="@mipmap/mask_profile"
+          android:layout_alignParentRight="true"
+          android:layout_marginRight="@dimen/dimen_16dp" />
+
       <TextView
-          android:layout_width="match_parent"
+          android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:textSize="24sp"
-          android:layout_marginTop="70dp"
-          android:textStyle="bold"
+          android:layout_marginTop="75dp"
+          android:layout_marginStart="@dimen/dimen_16dp"
+          android:layout_marginEnd="@dimen/dimen_16dp"
           android:textColor="@color/white"
-          android:paddingStart="16dp"
-          android:paddingEnd="16dp"
-          android:text="Find Your Desired \nPandit Ji \nAnytime,Anywhere"/>
+          android:text="@string/find_your"/>
       <androidx.cardview.widget.CardView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
@@ -52,7 +62,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Search Your Pandit"
+            android:hint="@string/search_your_pandit_ji"
             android:textSize="13sp"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
@@ -66,28 +76,39 @@
 
 
   </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/txt_categories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_below="@+id/card_header"
+        android:textColor="@color/black"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/padding_8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/txt_categories"/>
   <androidx.recyclerview.widget.RecyclerView
       android:id="@+id/rv_post"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_below="@+id/card_header" />
+      android:layout_below="@+id/txt_categories" />
 
   <TextView
-      android:id="@+id/txt_categories"
+      android:id="@+id/txt_top"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:textSize="20sp"
+      android:textSize="16sp"
       android:layout_below="@+id/rv_post"
       android:textColor="@color/black"
       android:layout_marginStart="8dp"
       android:layout_marginEnd="8dp"
-      android:text="Top Rated Pandit Ji"/>
+      android:text="@string/txt_top_rated_pandit_ji"/>
 
   <androidx.recyclerview.widget.RecyclerView
       android:id="@+id/rv_top_rated"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_below="@+id/txt_categories"/>
+      android:layout_below="@+id/txt_top"/>
 
 
   <ProgressBar
@@ -101,7 +122,7 @@
       android:id="@+id/txt_no_record_found"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="No Record Found!"
+      android:text="@string/no_record_found"
       android:padding="16dp"
       android:visibility="gone"
       android:layout_centerInParent="true"/>

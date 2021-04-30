@@ -14,8 +14,8 @@
             android:id="@+id/img_header"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:background="#33673AB7"
-            android:scaleType="centerCrop"
+            android:background="@color/purple_500"
+            android:foreground="@drawable/gredient_bg"
             android:contentDescription="@string/app_name" />
         <LinearLayout
             android:id="@+id/toolbar"
@@ -49,37 +49,93 @@
                 android:layout_weight="1"
                 android:text="Edit Profile"
                 android:padding="@dimen/padding_8dp"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
         </LinearLayout>
 
-
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_edit_button"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:contentDescription="@string/app_name"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dimen_16dp"
+            app:tint="@color/white" />
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/iv_user_photo"
             android:layout_width="130dp"
             android:layout_height="130dp"
+            android:layout_marginLeft="@dimen/dimen_16dp"
             android:layout_below="@+id/toolbar"
-            android:layout_marginTop="@dimen/padding_8dp"
-            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_centerVertical="true"
             android:src="@mipmap/mask_profile" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/toolbar"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_toEndOf="@+id/iv_user_photo"
+            android:layout_toRightOf="@+id/iv_user_photo">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rajeev Singal"
+                android:textColor="@color/white"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/txt_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/white"
+                android:lineSpacingExtra="4sp"
+                android:layout_marginTop="@dimen/padding_8dp"
+                android:text="Actor, Singer, Radio Jockey. Famous Role" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="@dimen/padding_8dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.kikt.view.CustomRatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:currentStar="3.5"
+                    app:maxStar="5"
+                    app:minStar="0.5"
+                    app:starHeight="12dp"
+                    app:starWidth="12dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12k Reviews"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center_vertical"
+                    />
+            </LinearLayout>
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/txt_user_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/iv_user_photo"
-            android:layout_centerHorizontal="true"
-            android:padding="@dimen/padding_8dp"
-            android:text="Rajeev Singal"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:gravity="center_horizontal" />
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/img_header"
+            android:layout_marginTop="@dimen/dimen_16dp"
             android:id="@+id/rv_settings"/>
 
     </RelativeLayout>
